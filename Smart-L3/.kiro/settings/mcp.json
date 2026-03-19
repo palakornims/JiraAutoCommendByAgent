@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "mcp-atlassian": {
+      "command": "uvx",
+      "args": [
+        "mcp-atlassian"
+      ],
+      "env": {
+        "CONFLUENCE_URL": "https://confluence.2c2p.com",
+        "CONFLUENCE_PERSONAL_TOKEN": ""
+      },
+      "disabled": false,
+      "autoApprove": [
+        "confluence_get_page",
+        "confluence_create_page",
+        "confluence_get_page_children"
+      ]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer "
+      },
+      "autoApprove": [
+        "get_me",
+        "search_repositories",
+        "get_file_contents",
+        "search_code"
+      ]
+    }
+  }
+}
